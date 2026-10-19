@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculoIESSApp.MainPage"
+             BackgroundColor="{AppThemeBinding Light=#F5F5F7, Dark=#1C1C1E}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="25" VerticalOptions="Center">
+
+            <!-- Título principal -->
+            <Label Text="Calculadora de Aporte IESS"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10" />
+
+            <!-- Entrada: Nombre -->
+            <Label Text="Nombre:" FontAttributes="Bold" />
+            <Entry x:Name="txtNombre" Placeholder="Ej. Juan" />
+
+            <!-- Entrada: Apellido -->
+            <Label Text="Apellido:" FontAttributes="Bold" />
+            <Entry x:Name="txtApellido" Placeholder="Ej. Pérez" />
+
+            <!-- Entrada: Edad -->
+            <Label Text="Edad:" FontAttributes="Bold" />
+            <Entry x:Name="txtEdad" 
+                   Placeholder="Ej. 25" 
+                   Keyboard="Numeric" />
+
+            <!-- Entrada: Salario -->
+            <Label Text="Salario Mensual ($):" FontAttributes="Bold" />
+            <Entry x:Name="txtSalario" 
+                   Placeholder="Ej. 500.00" 
+                   Keyboard="Numeric" />
+
+            <!-- Botón de Acción -->
+            <Button Text="Calcular Aporte"
+                    Clicked="OnCalcularClicked"
+                    Margin="0,15,0,0"
+                    CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
